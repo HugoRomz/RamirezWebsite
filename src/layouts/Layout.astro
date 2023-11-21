@@ -1,0 +1,50 @@
+---
+import Navbar from '../components/Navbar.astro';
+import TopBar from '../components/TopBar.astro';
+import Footer from '../components/Footer.astro';
+
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+
+		<TopBar />
+		<Navbar />
+		<slot />
+		<Footer />
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+	</body>
+</html>
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	html {
+		font-family: "PublicSans" ,system-ui, sans-serif;
+
+	}
+
+	@font-face {
+		font-family: "PublicSans";
+		src: url("/fonts/PublicSans-Bold.ttf") format("truetype");
+
+	}
+</style>
+
+
