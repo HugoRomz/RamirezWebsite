@@ -1,0 +1,40 @@
+---
+  export interface Props {
+    urlimage: string,
+    description: string
+  }
+
+
+const { urlimage, description } = Astro.props;
+
+import WhyUs from "../components/whyUs.astro";
+---
+
+
+
+<div class="flex flex-row max-w-7xl mx-auto md:p-0 p-5">
+  <div class="flex md:flex-row flex-wrap h-auto">
+   
+    <div class="w-full md:w-2/5 text-center text-gray-700">
+      <div class="flex-1 animate-fade-left p-2 md:p-0">
+          <img
+            src={urlimage}
+            alt="Image page"
+            class="w-full h-[550px] rounded-lg object-cover"
+          />
+          <hr class="w-full h-1 my-4 bg-[#0C2461] border-0 rounded md:mb-5" />
+          <WhyUs />
+          <hr class="w-full h-1 my-4 bg-[#0C2461] border-0 rounded md:mb-5" />
+        </div>
+    </div>
+    <div class="w-full md:w-3/5 text-gray-200">
+      <div class="flex-1 md:pr-32 md:pl-16 px-2">
+          <p class="text-gray-900 mb-4 tracking-wider leading-8 animate-fade-right">
+            {description}
+          </p> 
+          
+        </div>
+    </div>
+  </div>
+ 
+</div>
