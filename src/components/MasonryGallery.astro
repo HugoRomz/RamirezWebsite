@@ -1,0 +1,16 @@
+---
+const {title,images,columns} = Astro.props;
+---
+
+<div class="text-center mb-16">
+    <h2 class="text-xl md:text-3xl font-bold mb-5">
+        {title}
+    </h2>
+    <div class={`columns-2 md:columns-4 gap-3 space-y-3`}>
+        {
+            images.map((image, index) => (
+                <img class="w-full rounded-xl shadow" src={image} alt={`Gallery item ${index}`} />
+            ))
+        }
+    </div>
+</div>

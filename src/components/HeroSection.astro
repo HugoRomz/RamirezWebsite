@@ -1,0 +1,28 @@
+---
+import { contactData } from "../data/contactData";
+const {emails} = contactData;
+---
+<!-- Hero -->
+<div class="relative bg-[url('/hero-image.webp')] bg-cover bg-bottom md:h-[39rem] h-[33rem]">
+  <div class="max-w-[76rem] mx-auto px-4 xl:px-0 pt-12 lg:pt-32 pb-24 animate-fade-right animate-duration-[2000ms]">
+    <h1 class="font-semibold text-white text-3xl md:text-6xl text-balance ">
+      Ramirez Window Cleaning & Pressure Washing
+    </h1>
+    <div class="max-w-3xl">
+      <p class="mt-4 text-neutral-200 text-lg text-balance">
+        Ramírez Window Cleaning is a family-owned business in Florida, specializing in window cleaning and pressure washing for residential and commercial properties. We provide services in the areas of 
+        <span class="text-[#ff0] font-semibold">
+        Boca Raton, Coral Springs, Pompano Beach, Broward, Palm Beach, Boynton Beach, Fort Lauderdale, and Weston.
+        </span>
+      </p>
+      <a
+      href={`mailto:${emails[0].url}`}
+      class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-zinc-800 focus:ring-4 focus:ring-gray-100 animate-fade-right animate-duration-[2000ms] mt-4"
+    >
+      Contact Us
+    </a>
+    </div>
+  </div>
+</div>
+<!-- End Hero -->
+
