@@ -1,0 +1,22 @@
+---
+import Card from "./Card.astro";
+import { services } from '../data/servicesData';
+
+---
+ <!-- CARD SECTION -->
+ <section class="bg-zinc-100">
+    <div
+      class="relative -mt-10 md:-mt-40 flex justify-between items-center max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 animate-fade-up animate-duration-[2000ms] mb-28">
+        {services.slice(0, 4).map(service => (
+            <Card
+                category={service.category}
+                title={service.title}
+                description={service.description}
+                imageUrl={service.imageUrl}
+                UrlRef={`/services/${service.slug}`}
+            />
+        ))}
+      </div>
+    </div>
+  </section>

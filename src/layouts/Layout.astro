@@ -1,53 +1,64 @@
 ---
+import Topbar from '../components/Topbar.astro';
 import Navbar from '../components/Navbar.astro';
-import TopBar from '../components/TopBar.astro';
 import Footer from '../components/Footer.astro';
-
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Ramírez Window Cleaning is a family-owned business in Florida specializing in window cleaning and pressure washing for residential and commercial properties. We provide services in Boca Raton, Coral Springs, Pompano Beach, Broward, Palm Beach, Boynton Beach, Fort Lauderdale, and Weston." />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Ramírez Window Cleaning, empresa familiar en Florida, especializada en limpieza de ventanas y lavado a presión para propiedades residenciales y comerciales en Boca Raton, Coral Springs, Pompano Beach, Broward, Palm Beach, Boynton Beach, Fort Lauderdale y Weston." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		
+		<!-- SEO Optimizations -->
+		<meta name="keywords" content="limpieza de ventanas, lavado a presión, Ramírez Window Cleaning, limpieza comercial, limpieza residencial, Florida, Boca Raton, Coral Springs, Pompano Beach, Broward, Palm Beach, Boynton Beach, Fort Lauderdale, Weston" />
+		<meta property="og:title" content="{title}" />
+		<meta property="og:description" content="Ramírez Window Cleaning ofrece servicios de limpieza de ventanas y lavado a presión en Florida, para propiedades residenciales y comerciales." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.ramirezwindowcleaning.com" />
+		<meta property="og:image" content="/path/to/image.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="{title}" />
+		<meta name="twitter:description" content="Ramírez Window Cleaning, especialistas en limpieza de ventanas y lavado a presión en Florida." />
+		<meta name="twitter:image" content="/path/to/image.jpg" />
+		
+		<!-- Canonical URL for SEO -->
+		<link rel="canonical" href="https://www.ramirezwindowcleaning.com" />
 	</head>
-	<body>
-
-		<TopBar />
+	
+	<body class="flex flex-col min-h-screen">
+		<Topbar />
 		<Navbar />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<Footer />
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+		<script>import "preline/dist/preline.js";</script>
 	</body>
 </html>
-<style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
 
+<style is:global>
 	html {
 		font-family: "PublicSans" ,system-ui, sans-serif;
-
 	}
 
 	@font-face {
 		font-family: "PublicSans";
-		src: url("/fonts/PublicSans-Bold.ttf") format("truetype");
+		src: url("../assets/fonts/PublicSans-Bold.ttf") format("truetype");
 	}
 	@font-face {
 		font-family: "PublicSans";
-		src: url("/fonts/PublicSans-Regular.ttf") format("truetype");
+		src: url("../assets/fonts/PublicSans-Regular.ttf") format("truetype");
 	}
 </style>
-
-

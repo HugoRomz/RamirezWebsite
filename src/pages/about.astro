@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TitlePage from "../components/TitlePage.astro";
+
+import imgAbout from "../assets/images/imgAbout.webp"
+import { Image } from "astro:assets";
+---
+
+<Layout title="About Us | Ramírez Window Cleaning | Expert Window Cleaning & Pressure Washing in Florida">
+  <TitlePage title="About Us" />
+  <div class="flex flex-row max-w-7xl mx-auto md:p-0 p-5 mb-10">
+    <div class="flex md:flex-row flex-wrap h-auto">
+     
+      <div class="w-full md:w-2/5 text-center text-gray-700">
+        <div class="flex-1 animate-fade-left p-2 md:p-0">
+            <Image src={imgAbout} alt="Imagen de About us" class="size-full rounded-lg"/>
+          </div>
+      </div>
+      <div class="w-full md:w-3/5 text-gray-200">
+        <div class="flex-1 md:pr-32 md:pl-16 px-2 ">
+            <h2 class="text-4xl font-bold mb-4 text-[#0C2461] mt-4 md:mt-0">About Us</h2>
+            <hr class="w-48 h-1 my-4 bg-[#0C2461] border-0 rounded md:mb-5" />
+            <p class="text-gray-900 mb-4 tracking-wider leading-8 animate-fade-right text-pretty">
+            Ramírez Window Cleaning and Pressure Washing is a family business led by Didier Ramírez and Udiel Ramírez since 2017, providing quality services and exceeding the expectations of each of our clients.
+            </p> 
+            <p class="text-gray-900 mb-4 tracking-wider leading-8 animate-fade-right text-pretty">
+              We pride ourselves on our ability to tailor our services to meet
+              each client's unique needs, ensuring personalized and efficient
+              solutions. Our primary goal is to provide top-tier quality services
+              at competitive prices, always keeping your comfort and satisfaction
+              in mind.
+            </p>
+            <p class="text-gray-900 mb-4 tracking-wider leading-8 animate-fade-right text-pretty">
+              At Ramirez Window Cleaning & Pressure Washing, we focus not only on
+              technical excellence but also on creating an exceptional customer
+              experience. We firmly believe that outstanding service goes beyond
+              the end results - it's about building lasting relationships with our
+              clients, based on trust, respect, and an understanding of their
+              needs.
+            </p>
+            <p class="text-gray-900 mb-4 tracking-wider leading-8 animate-fade-right text-pretty">
+              Every project is an opportunity for us to demonstrate our commitment
+              to excellence and our passion for exceeding your expectations. Let
+              our team show you the difference that choosing Ramirez Window
+              Cleaning & Pressure Washing makes, where quality and customer
+              satisfaction are our top priority.
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,62 @@
+---
+import MasonryGallery from "../components/MasonryGallery.astro";
+import TitlePage from "../components/TitlePage.astro";
+import Layout from "../layouts/Layout.astro";
+
+const serviceUrl = "/services/"
+
+const sealings = [
+  `${serviceUrl}sealing.webp`,
+  `${serviceUrl}sealing1.webp`,
+  `${serviceUrl}sealing2.webp`,
+  `${serviceUrl}sealing3.webp`,
+  `${serviceUrl}sealing4.webp`,
+  `${serviceUrl}sealing5.webp`,
+  `${serviceUrl}sealing6.webp`,
+  `${serviceUrl}sealing7.webp`,
+  `${serviceUrl}sealing8.webp`,
+  `${serviceUrl}sealing9.webp`,
+  `${serviceUrl}sealing10.webp`,
+  `${serviceUrl}sealing11.webp`,
+  `${serviceUrl}sealing12.webp`,
+  `${serviceUrl}sealing13.webp`,
+  `${serviceUrl}sealing14.webp`,
+  `${serviceUrl}sealing15.webp`,
+];
+
+const pintures = [
+  `${serviceUrl}pinture1.webp`,
+  `${serviceUrl}pinture2.webp`,
+  `${serviceUrl}pinture3.webp`,
+  `${serviceUrl}pinture4.webp`,
+  `${serviceUrl}pinture5.webp`,
+  `${serviceUrl}pinture6.webp`,
+  `${serviceUrl}pinture7.webp`,
+  `${serviceUrl}pinture8.webp`,
+];
+const roofs = [
+  `${serviceUrl}roof1.webp`,
+  `${serviceUrl}roof2.webp`,
+  `${serviceUrl}roof3.webp`,
+  `${serviceUrl}roof4.webp`,
+];
+
+const windows = [
+  `${serviceUrl}window1.webp`,
+  `${serviceUrl}window2.webp`,
+  `${serviceUrl}window3.webp`,
+  `${serviceUrl}window4.webp`,
+  `${serviceUrl}window5.webp`,
+  `${serviceUrl}window6.webp`,
+];
+---
+
+<Layout title="Gallery | Ramírez Window Cleaning | Expert Window Cleaning & Pressure Washing in Florida">
+    <TitlePage title="Gallery"/>
+    <div class="max-w-7xl mx-auto w-full px-4 ">
+        <MasonryGallery title="Sealing Services" images={sealings} columns="4"/>
+        <MasonryGallery title="Interior and Exterior Painting" images={pintures} columns="3"/>
+        <MasonryGallery title="Roof Cleaning" images={roofs} columns="3"/>
+        <MasonryGallery title="Window Cleaning" images={windows} columns="3"/>
+    </div>
+</Layout>
